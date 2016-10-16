@@ -24,6 +24,7 @@ class TclTk < Formula
   option "with-x11", "Build X11-based Tk instead of Aqua-based Tk"
 
   depends_on :x11 => :optional
+  depends_on "pkg-config" => :build if build.with? "x11"
 
   resource "tk" do
     url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.6/tk8.6.6-src.tar.gz"
