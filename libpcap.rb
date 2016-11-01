@@ -7,10 +7,9 @@ class Libpcap < Formula
 
   bottle do
     cellar :any
-    revision 1
-    sha256 "a4bcec4f3744f8d79246f8bf08f050c5ead1282bb84cbfee8781adda8be9d067" => :el_capitan
-    sha256 "6d61bd2683252f7791b581e8ca0743663c70f5ccd7b6900b330b6ae51b09fe56" => :yosemite
-    sha256 "01d4bcd4a4bebcd0cf5131a6bf49aba5efc19c7de5ffacda684f5655ea0126b4" => :mavericks
+    sha256 "95a69600f13a8fae57c9d96f436a5161a0eb30f7c121dad25518039381663661" => :sierra
+    sha256 "a68ac5c1c4b570fdf288c0049524c232d9122ef2c6eeae95e4f7a87f9fd6f4a4" => :el_capitan
+    sha256 "e7d313172264c39a22038ac0c6fa67e1ce796406a761511b6a854a4e5a3f05dc" => :yosemite
   end
 
   keg_only :provided_by_osx
