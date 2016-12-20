@@ -1,5 +1,5 @@
 # Homebrew Dupes
-These formulae duplicate software provided by OS X, though may provide more recent or bugfix versions.
+These formulae duplicate software provided by macOS, though may provide more recent or bugfix versions.
 
 ## How do I install these formulae?
 `brew install homebrew/dupes/<formula>`
