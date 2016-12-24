@@ -1,8 +1,8 @@
 class Lapack < Formula
   desc "Linear Algebra PACKage"
   homepage "http://www.netlib.org/lapack/"
-  url "http://www.netlib.org/lapack/lapack-3.6.1.tgz"
-  sha256 "888a50d787a9d828074db581c80b2d22bdb91435a673b1bf6cd6eb51aa50d1de"
+  url "http://www.netlib.org/lapack/lapack-3.7.0.tgz"
+  sha256 "ed967e4307e986474ab02eb810eed1d1adc73f5e1e3bc78fb009f6fe766db3be"
   head "https://github.com/Reference-LAPACK/lapack.git"
 
   bottle do
