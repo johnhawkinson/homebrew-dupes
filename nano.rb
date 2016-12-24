@@ -3,6 +3,7 @@ class Nano < Formula
   homepage "https://www.nano-editor.org/"
   url "https://www.nano-editor.org/dist/v2.7/nano-2.7.2.tar.gz"
   sha256 "89cc45dd630c6fb7276a14e1b3436a9972cf6d66eed15b14c3583af99070353c"
+  revision 1
 
   bottle do
     sha256 "8d9d85b9539a87c5f1096d1471a97e39278df4011ecd0afcb93fd0a189102798" => :sierra
@@ -36,6 +37,7 @@ class Nano < Formula
                           "--enable-nanorc",
                           "--enable-utf8"
     system "make", "install"
+    doc.install "doc/nanorc.sample"
   end
 
   test do
