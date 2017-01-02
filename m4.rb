@@ -7,9 +7,9 @@ class M4 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e45bb042581245da6b5ada6889ca57505ca739af5ec01cef26da7369cf4220f7" => :el_capitan
-    sha256 "f27b48a9db5c80ee0fad2bc10d7a9b861e0082bb02be6522d013f327b92612ae" => :yosemite
-    sha256 "c5486b8a87ba411b23cb0bb8d6d8939a0dbfb717e504a40b10eab2caefdef90e" => :mavericks
+    sha256 "2b72de8c334cf6faa6f29a420bb87d9ff4d25b4ded8c83a47c27f60840ea96d6" => :sierra
+    sha256 "a740efe575f7b6a0b64bf42afdd9d2d64b67f7551fde00c628e1d6317a084166" => :el_capitan
+    sha256 "a3d45ad75fabb47348fa84fe3ddf2c0aae917e43a65db4959b803ca298faccd3" => :yosemite
   end
 
   keg_only :provided_by_osx
