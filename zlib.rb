@@ -8,6 +8,8 @@ class Zlib < Formula
   bottle do
     cellar :any
     revision 1
+    sha256 "9ec582bc10aeb72e417a2c5bdb6f2db6541d3cc8b23c31e51e351c4ad924aaa7" => :sierra
+    sha256 "502f66f8a3df28cd47568967250c534d19ad6c1439c23b235abcc74144e8dd4c" => :el_capitan
     sha256 "2971abbd45572722af5043a74ecf8a5bfd06adc9834ec90e4126a34c6ce982a1" => :yosemite
     sha256 "adc394a9e296003bc2bc88451c649aec019496cb6ed3d6673005fcd818ae44a5" => :mavericks
     sha256 "6ece1cb4b656f0f7ef1feab95ef6eb183e2f9ee2448c1e034de1a97d7f9da249" => :mountain_lion
