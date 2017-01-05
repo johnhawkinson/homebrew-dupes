@@ -11,6 +11,11 @@ class Less < Formula
     sha256 "c12b5ad0d9859e185b7c7f5d33537c248c0463fcbd786290280b6aa5a1be9f98" => :mavericks
   end
 
+  devel do
+    url "http://www.greenwoodsoftware.com/less/less-487.tar.gz"
+    sha256 "f3dc8455cb0b2b66e0c6b816c00197a71bf6d1787078adeee0bcf2aea4b12706"
+  end
+
   depends_on "pcre" => :optional
   depends_on "homebrew/dupes/ncurses" unless OS.mac?
 
