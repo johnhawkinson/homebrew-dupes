@@ -16,7 +16,7 @@ class Ed < Formula
   option "with-default-names", "Don't prepend 'g' to the binaries"
 
   def install
-    ENV.j1
+    ENV.deparallelize
 
     args = ["--prefix=#{prefix}"]
     args << "--program-prefix=g" if build.without? "default-names"
