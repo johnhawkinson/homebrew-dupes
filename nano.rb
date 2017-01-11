@@ -1,9 +1,8 @@
 class Nano < Formula
   desc "Free (GNU) replacement for the Pico text editor"
   homepage "https://www.nano-editor.org/"
-  url "https://www.nano-editor.org/dist/v2.7/nano-2.7.2.tar.gz"
-  sha256 "89cc45dd630c6fb7276a14e1b3436a9972cf6d66eed15b14c3583af99070353c"
-  revision 1
+  url "https://www.nano-editor.org/dist/v2.7/nano-2.7.4.tar.gz"
+  sha256 "23ffc2de52d687739fed6dc2fc94df36aa7da7bb52c8740c523fdd7336fdbc8c"
 
   bottle do
     sha256 "2d5c2af1c5c17ab7b45495fa7e50dbddc96d3cc689400b99bae8050911ee09aa" => :sierra
@@ -37,7 +36,7 @@ class Nano < Formula
                           "--enable-nanorc",
                           "--enable-utf8"
     system "make", "install"
-    doc.install "doc/nanorc.sample"
+    doc.install "doc/sample.nanorc"
   end
 
   test do
