@@ -29,7 +29,7 @@ class Libiconv < Formula
 
   def install
     ENV.universal_binary if build.universal?
-    ENV.j1
+    ENV.deparallelize
 
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
