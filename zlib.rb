@@ -1,9 +1,9 @@
 class Zlib < Formula
   desc "General-purpose lossless data-compression library"
   homepage "http://www.zlib.net/"
-  url "http://zlib.net/zlib-1.2.8.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.8/zlib-1.2.8.tar.gz"
-  sha256 "36658cb768a54c1d4dec43c3116c27ed893e88b02ecfcb44f2166f9c0b7f2a0d"
+  url "http://zlib.net/zlib-1.2.11.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz"
+  sha256 "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1"
 
   bottle do
     cellar :any
@@ -16,13 +16,6 @@ class Zlib < Formula
   end
 
   keg_only :provided_by_osx
-
-  option :universal
-
-  # configure script fails to detect the right compiler when "cc" is
-  # clang, not gcc. zlib mantainers have been notified of the issue.
-  # See: https://github.com/Homebrew/homebrew-dupes/pull/228
-  patch :DATA
 
   # http://zlib.net/zlib_how.html
   resource "test_artifact" do
@@ -47,17 +40,3 @@ class Zlib < Formula
     assert File.exist?("foo.txt.z")
   end
 end
-
-__END__
-diff --git a/configure b/configure
-index b77a8a8..54f33f7 100755
---- a/configure
-+++ b/configure
-@@ -159,6 +159,7 @@ case "$cc" in
- esac
- case `$cc -v 2>&1` in
-   *gcc*) gcc=1 ;;
-+  *clang*) gcc=1 ;;
- esac
- 
- show $cc -c $test.c
