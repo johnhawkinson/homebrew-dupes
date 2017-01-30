@@ -7,12 +7,9 @@ class Zlib < Formula
 
   bottle do
     cellar :any
-    revision 1
-    sha256 "9ec582bc10aeb72e417a2c5bdb6f2db6541d3cc8b23c31e51e351c4ad924aaa7" => :sierra
-    sha256 "502f66f8a3df28cd47568967250c534d19ad6c1439c23b235abcc74144e8dd4c" => :el_capitan
-    sha256 "2971abbd45572722af5043a74ecf8a5bfd06adc9834ec90e4126a34c6ce982a1" => :yosemite
-    sha256 "adc394a9e296003bc2bc88451c649aec019496cb6ed3d6673005fcd818ae44a5" => :mavericks
-    sha256 "6ece1cb4b656f0f7ef1feab95ef6eb183e2f9ee2448c1e034de1a97d7f9da249" => :mountain_lion
+    sha256 "6765c51c09a7aa0ad7c06379a9c7a6b7b3b1bfaaf6a37d111cee44153eaab6e2" => :sierra
+    sha256 "c37af2435a876fed3d8ced49698159ac7ab05efeed265de3c40a8e6c3868e332" => :el_capitan
+    sha256 "1c3d8a42f15b8f8f5427e5038c76538178b2b57759c57101fb07cbbe92d0ba21" => :yosemite
   end
 
   keg_only :provided_by_osx
