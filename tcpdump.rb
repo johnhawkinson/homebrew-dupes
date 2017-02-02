@@ -1,8 +1,8 @@
 class Tcpdump < Formula
   desc "Command-line packet analyzer"
   homepage "http://www.tcpdump.org/"
-  url "http://www.tcpdump.org/release/tcpdump-4.8.1.tar.gz"
-  sha256 "20e4341ec48fcf72abcae312ea913e6ba6b958617b2f3fb496d51f0ae88d831c"
+  url "http://www.tcpdump.org/release/tcpdump-4.9.0.tar.gz"
+  sha256 "eae98121cbb1c9adbedd9a777bf2eae9fa1c1c676424a54740311c8abcee5a5e"
 
   head "https://github.com/the-tcpdump-group/tcpdump.git"
 
@@ -14,12 +14,7 @@ class Tcpdump < Formula
   end
 
   depends_on "openssl"
-
-  if OS.mac?
-    depends_on "homebrew/dupes/libpcap" => :optional
-  else
-    depends_on "homebrew/dupes/libpcap"
-  end
+  depends_on "homebrew/dupes/libpcap" => :optional
 
   def install
     system "./configure", "--prefix=#{prefix}",
