@@ -1,9 +1,9 @@
 class Libiconv < Formula
   desc "Conversion library"
   homepage "https://www.gnu.org/software/libiconv/"
-  url "https://ftpmirror.gnu.org/libiconv/libiconv-1.14.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/libiconv/libiconv-1.14.tar.gz"
-  sha256 "72b24ded17d687193c3366d0ebe7cde1e6b18f0df8c55438ac95be39e8a30613"
+  url "https://ftpmirror.gnu.org/libiconv/libiconv-1.15.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/libiconv/libiconv-1.15.tar.gz"
+  sha256 "ccf536620a45458d26ba83887a983b96827001e92a13847b45e4925cc8913178"
 
   bottle do
     sha256 "64d8a9383ba42ba3e41422bb8548ebc8f296f67fdda6e6d6a324f990b03c6db0" => :el_capitan
@@ -13,13 +13,6 @@ class Libiconv < Formula
 
   keg_only :provided_by_osx
 
-  option :universal
-
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/patches/9be2793af/libiconv/patch-Makefile.devel"
-    sha256 "ad9b6da1a82fc4de27d6f7086a3382993a0b16153bc8e8a23d7b5f9334ca0a42"
-  end
-
   patch do
     url "https://raw.githubusercontent.com/Homebrew/patches/9be2793af/libiconv/patch-utf8mac.diff"
     sha256 "e8128732f22f63b5c656659786d2cf76f1450008f36bcf541285268c66cabeab"
@@ -28,15 +21,20 @@ class Libiconv < Formula
   patch :DATA
 
   def install
-    ENV.universal_binary if build.universal?
     ENV.deparallelize
 
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
-                          "--enable-extra-encodings"
+                          "--enable-extra-encodings",
+                          "--enable-static",
+                          "--docdir=#{doc}"
     system "make", "-f", "Makefile.devel", "CFLAGS=#{ENV.cflags}", "CC=#{ENV.cc}"
     system "make", "install"
+  end
+
+  test do
+    system bin/"iconv", "--help"
   end
 end
 
