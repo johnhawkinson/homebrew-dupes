@@ -1,9 +1,9 @@
 class Grep < Formula
   desc "GNU grep, egrep and fgrep"
   homepage "https://www.gnu.org/software/grep/"
-  url "https://ftpmirror.gnu.org/grep/grep-2.27.tar.xz"
-  mirror "https://ftp.gnu.org/gnu/grep/grep-2.27.tar.xz"
-  sha256 "ad4cc44d23074a1c3a8baae8fbafff2a8c60f38a9a6108f985eef6fbee6dcaeb"
+  url "https://ftpmirror.gnu.org/grep/grep-2.28.tar.xz"
+  mirror "https://ftp.gnu.org/gnu/grep/grep-2.28.tar.xz"
+  sha256 "3bad4c23eeb8dfa2fa84cdbe368398f75fdcd54bde411db83b9ef7fba5b60185"
 
   bottle do
     cellar :any
