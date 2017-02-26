@@ -14,13 +14,9 @@ class Ncurses < Formula
 
   keg_only :provided_by_osx
 
-  option :universal
-
   depends_on "pkg-config" => :build
 
   def install
-    ENV.universal_binary if build.universal?
-
     # Fix the build for GCC 5.1
     # error: expected ')' before 'int' in definition of macro 'mouse_trafo'
     # See https://lists.gnu.org/archive/html/bug-ncurses/2014-07/msg00022.html
