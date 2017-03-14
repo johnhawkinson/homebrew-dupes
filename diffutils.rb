@@ -4,6 +4,7 @@ class Diffutils < Formula
   url "https://ftpmirror.gnu.org/diffutils/diffutils-3.5.tar.xz"
   mirror "https://ftp.gnu.org/gnu/diffutils/diffutils-3.5.tar.xz"
   sha256 "dad398ccd5b9faca6b0ab219a036453f62a602a56203ac659b43e889bec35533"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
