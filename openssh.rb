@@ -1,7 +1,7 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
-  homepage "http://www.openssh.com/"
-  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz"
+  homepage "https://www.openssh.com/"
+  url "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz"
   mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz"
   version "7.4p1"
   sha256 "1b1fc4a14e2024293181924ed24872e6f2e06293f3e8926a376b8aec481f19d1"
