@@ -5,6 +5,7 @@ class TclTk < Formula
   mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_6/tcl8.6.6-src.tar.gz"
   version "8.6.6"
   sha256 "a265409781e4b3edcc4ef822533071b34c3dc6790b893963809b9fe221befe07"
+  revision 1
 
   bottle do
     rebuild 1
@@ -34,8 +35,8 @@ class TclTk < Formula
   end
 
   resource "tcllib" do
-    url "https://github.com/tcltk/tcllib/archive/tcllib_1_18.tar.gz"
-    sha256 "6a87881f545afb69c1130f60984b5d35cc22f1593b0835b982871c188fde3de8"
+    url "https://downloads.sourceforge.net/project/tcllib/tcllib/1.18/tcllib-1.18.tar.gz"
+    sha256 "72667ecbbd41af740157ee346db77734d1245b41dffc13ac80ca678dd3ccb515"
   end
 
   # sqlite won't compile on Tiger due to missing function;
