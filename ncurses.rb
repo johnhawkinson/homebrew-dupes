@@ -4,7 +4,7 @@ class Ncurses < Formula
   url "https://ftpmirror.gnu.org/ncurses/ncurses-6.0.tar.gz"
   mirror "https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz"
   sha256 "f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "03544fbc2da911adbd75ef5c15e7de3fad5860734edb7163f612d8e8ee2d2435" => :el_capitan
@@ -16,6 +16,14 @@ class Ncurses < Formula
 
   depends_on "pkg-config" => :build
 
+  # stable rollup patch created by upstream see
+  # http://invisible-mirror.net/archives/ncurses/6.0/README
+  resource "ncurses-6.0-20160910-patch.sh" do
+    url "http://invisible-mirror.net/archives/ncurses/6.0/ncurses-6.0-20160910-patch.sh.bz2"
+    mirror "https://www.mirrorservice.org/sites/lynx.invisible-island.net/ncurses/6.0/ncurses-6.0-20160910-patch.sh.bz2"
+    sha256 "f570bcfe3852567f877ee6f16a616ffc7faa56d21549ad37f6649022f8662538"
+  end
+
   def install
     # Fix the build for GCC 5.1
     # error: expected ')' before 'int' in definition of macro 'mouse_trafo'
@@ -25,6 +33,10 @@ class Ncurses < Formula
     ENV.append "CPPFLAGS", "-P"
 
     (lib/"pkgconfig").mkpath
+
+    # stage and apply patch
+    buildpath.install resource("ncurses-6.0-20160910-patch.sh")
+    system "sh", "ncurses-6.0-20160910-patch.sh"
 
     system "./configure", "--prefix=#{prefix}",
                           "--enable-pc-files",
